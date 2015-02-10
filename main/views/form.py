@@ -18,3 +18,17 @@ def index(request):
 
 def splash(request):
 	return render(request, "main/splash.html", {})
+
+def about(request):
+	return render(request, "main/about.html", {})
+
+def campaign1(request):
+	return render(request, "main/campaign1.html", {})
+
+def campaign2(request):
+	return render(request, "main/campaign2.html", {})
+
+def campaign3(request):
+	return render(request, "main/campaign3.html", {})
+
+
