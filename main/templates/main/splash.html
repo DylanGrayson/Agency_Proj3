@@ -9,6 +9,9 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
     <lihk rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static "css/component.css" %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static "css/normalize.css" %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static "fonts/font-awesome-4.2.0/css/font-awesome.min.css" %}" />
   </head>
   <body>
     <nav class="navbar navbar-default">
@@ -41,8 +44,18 @@
             </div><!-- /.container-fluid -->
         </nav>
       <div class="site-wrapper-inner">
+        
       	<h1>Hello World</h1>
+
+          <span class="input input--haruki">
+          <input class="input__field input__field--haruki" type="text" id="input-1" />
+          <label class="input__label input__label--haruki" for="input-1">
+            <span class="input__label-content input__label-content--haruki">Email</span>
+          </label>
+        </span>
+
       </div>
+      <script src="{% static "js/classie.js" %}"></script>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
