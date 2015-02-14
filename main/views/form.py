@@ -14,7 +14,7 @@ def index(request):
 		if form.is_valid():
 			email = form.cleaned_data["email"]
 	else:
-		return render(request, "main/splash.html", {})
+		return render(request, "main/index.html", {})
 
 def splash(request):
 	return render(request, "main/splash.html", {})
