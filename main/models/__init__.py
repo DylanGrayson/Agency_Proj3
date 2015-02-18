@@ -2,6 +2,7 @@ import os
 import re
 import types
 import importlib
+from main.models import Campaign
 
 model_names = []
 
