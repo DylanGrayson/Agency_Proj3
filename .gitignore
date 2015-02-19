@@ -37,3 +37,5 @@ coverage.xml
 # Mr Developer
 .mr.developer.cfg
 .emptydir
+
+.DS_Store

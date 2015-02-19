@@ -8,3 +8,5 @@ syntax: regexp
 ^\.hg/
 ^build/
 .emptydir
+
+.DS_Store
