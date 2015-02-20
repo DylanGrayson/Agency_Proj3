@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from main.models import Campaign
-from main.views.form import MoreInfoForm, FreeFacepaint, MiceBorrow, VirusCon, FriendClosure, ThrowbackSchool
+from main.views.form import MoreInfoForm, FreeFacepaint, MiceBorrow, VirusCon, FriendClosure, ThrowbackSchool, HollywoodUndead
 
 
 def splash(request):
@@ -44,7 +44,7 @@ def mouse(request):
             name = form.cleaned_data["name"]
             return render(request, "main/form_mice.html", {'data': form.cleaned_data, 'campaign': 'dont_care'})
     else:
-        return render(request, "main/form.html", {'form': MoreInfoForm})
+        return render(request, "main/form.html", {'form': MiceBorrow})
 
 def friend(request):
     if request.method == 'POST':
@@ -54,7 +54,7 @@ def friend(request):
             name = form.cleaned_data["name"]
             return render(request, "main/form_friend.html", {'data': form.cleaned_data, 'campaign': 'dont_care'})
     else:
-        return render(request, "main/form.html", {'form': MoreInfoForm})
+        return render(request, "main/form.html", {'form': VirusCon})
 
 def closure(request):
     if request.method == 'POST':
@@ -66,7 +66,7 @@ def closure(request):
             state = form.cleaned_data["state"]
             return render(request, "main/form_closure.html", {'data': form.cleaned_data, 'campaign': 'dont_care'})
     else:
-        return render(request, "main/form.html", {'form': MoreInfoForm})
+        return render(request, "main/form.html", {'form': FriendClosure})
 
 def old_school(request):
     if request.method == 'POST':
@@ -77,7 +77,7 @@ def old_school(request):
             school = form.cleaned_data["school"]
             return render(request, "main/form_throwback.html", {'data': form.cleaned_data, 'campaign': 'dont_care'})
     else:
-        return render(request, "main/form.html", {'form': MoreInfoForm})
+        return render(request, "main/form.html", {'form': ThrowbackSchool})
 
 def hollywood_undead(request):
     if request.method == 'POST':
@@ -89,7 +89,7 @@ def hollywood_undead(request):
             email = form.cleaned_data["email"]
             return render(request, "main/form_hollywood.html", {'data': form.cleaned_data, 'campaign': 'blue_man'})
     else:
-        return render(request, "main/form.html", {'form': FreeFacepaint})
+        return render(request, "main/form.html", {'form': HollywoodUndead})
 		
 def campaigns(request):
     return render(request, "main/campaigns.html", {'campaigns': Campaign.objects.all()})
