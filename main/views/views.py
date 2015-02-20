@@ -37,9 +37,10 @@ def dont_care(request):
 
 def mouse(request):
     if request.method == 'POST':
-        form = MoreInfoForm(request.POST)
+        form = MiceBorrow(request.POST)
         if form.is_valid():
-            email = form.cleaned_data["email"]
+            city = form.cleaned_data["city"]
+            mice_num = form.cleaned_data["num_mice"]
             name = form.cleaned_data["name"]
             return render(request, "main/form_mice.html", {'data': form.cleaned_data, 'campaign': 'dont_care'})
     else:
@@ -47,30 +48,33 @@ def mouse(request):
 
 def friend(request):
     if request.method == 'POST':
-        form = MoreInfoForm(request.POST)
+        form = VirusCon(request.POST)
         if form.is_valid():
             email = form.cleaned_data["email"]
             name = form.cleaned_data["name"]
-            return render(request, "main/form_friend.html.html", {'data': form.cleaned_data, 'campaign': 'dont_care'})
+            return render(request, "main/form_friend.html", {'data': form.cleaned_data, 'campaign': 'dont_care'})
     else:
         return render(request, "main/form.html", {'form': MoreInfoForm})
 
 def closure(request):
     if request.method == 'POST':
-        form = MoreInfoForm(request.POST)
+        form = FriendClosure(request.POST)
         if form.is_valid():
-            email = form.cleaned_data["email"]
+            age = form.cleaned_data["age"]
             name = form.cleaned_data["name"]
-            return render(request, "main/form_closure.html.html", {'data': form.cleaned_data, 'campaign': 'dont_care'})
+            city = form.cleaned_data["city"]
+            state = form.cleaned_data["state"]
+            return render(request, "main/form_closure.html", {'data': form.cleaned_data, 'campaign': 'dont_care'})
     else:
         return render(request, "main/form.html", {'form': MoreInfoForm})
 
 def old_school(request):
     if request.method == 'POST':
-        form = MoreInfoForm(request.POST)
+        form = ThrowbackSchool(request.POST)
         if form.is_valid():
-            email = form.cleaned_data["email"]
+            age = form.cleaned_data["age"]
             name = form.cleaned_data["name"]
+            school = form.cleaned_data["school"]
             return render(request, "main/form_throwback.html", {'data': form.cleaned_data, 'campaign': 'dont_care'})
     else:
         return render(request, "main/form.html", {'form': MoreInfoForm})
