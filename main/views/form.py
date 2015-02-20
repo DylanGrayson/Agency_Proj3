@@ -38,3 +38,9 @@ class ThrowbackSchool(forms.Form):
     name = forms.CharField(label="Name", max_length=128)
     age = forms.IntegerField(label="Age")
     school = forms.CharField(label="School", max_length=128)
+	
+class HollywoodUndead(forms.Form):
+    name = forms.CharField(label="Name", max_length=128)
+	age = forms.IntegerField(label="Age")
+	address = forms.CharField(label="Address", max_length=128)
+	email = forms.CharField(label="Email", max_length=128)

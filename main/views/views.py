@@ -79,6 +79,17 @@ def old_school(request):
     else:
         return render(request, "main/form.html", {'form': MoreInfoForm})
 
-
+def hollywood_undead(request):
+    if request.method == 'POST':
+        form = HollywoodUndead(request.POST)
+        if form.is_valid():
+            name = form.cleaned_data["name"]
+            age = form.cleaned_data["age"]
+            address = form.cleaned_data["address"]
+            email = form.cleaned_data["email"]
+            return render(request, "main/form_hollywood.html", {'data': form.cleaned_data, 'campaign': 'blue_man'})
+    else:
+        return render(request, "main/form.html", {'form': FreeFacepaint})
+		
 def campaigns(request):
     return render(request, "main/campaigns.html", {'campaigns': Campaign.objects.all()})
