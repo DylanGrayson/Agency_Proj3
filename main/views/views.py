@@ -21,6 +21,7 @@ def blue_man(request):
             name = form.cleaned_data["name"]
             color = form.cleaned_data["color"]
             return render(request, "main/form_blue.html", {'data': form.cleaned_data, 'campaign': 'blue_man'})
+        return render(request, "main/form.html", {'form': FreeFacepaint, 'err': "sorry, you didn't do that right"})
     else:
         return render(request, "main/form.html", {'form': FreeFacepaint})
 
@@ -32,6 +33,7 @@ def dont_care(request):
             email = form.cleaned_data["email"]
             name = form.cleaned_data["name"]
             return render(request, "main/form_care.html", {'data': form.cleaned_data, 'campaign': 'dont_care'})
+        return render(request, "main/form.html", {'form': MoreInfoForm, 'err': "sorry, you didn't do that right"})
     else:
         return render(request, "main/form.html", {'form': MoreInfoForm})
 
@@ -43,6 +45,7 @@ def mouse(request):
             mice_num = form.cleaned_data["num_mice"]
             name = form.cleaned_data["name"]
             return render(request, "main/form_mice.html", {'data': form.cleaned_data, 'campaign': 'dont_care'})
+        return render(request, "main/form.html", {'form': MiceBorrow, 'err': "sorry, you didn't do that right"})
     else:
         return render(request, "main/form.html", {'form': MiceBorrow})
 
@@ -53,6 +56,7 @@ def friend(request):
             email = form.cleaned_data["email"]
             name = form.cleaned_data["name"]
             return render(request, "main/form_friend.html", {'data': form.cleaned_data, 'campaign': 'dont_care'})
+        return render(request, "main/form.html", {'form': VirusCon, 'err': "sorry, you didn't do that right"})
     else:
         return render(request, "main/form.html", {'form': VirusCon})
 
@@ -65,6 +69,7 @@ def closure(request):
             city = form.cleaned_data["city"]
             state = form.cleaned_data["state"]
             return render(request, "main/form_closure.html", {'data': form.cleaned_data, 'campaign': 'dont_care'})
+        return render(request, "main/form.html", {'form': FriendClosure, 'err': "sorry, you didn't do that right"})
     else:
         return render(request, "main/form.html", {'form': FriendClosure})
 
@@ -76,6 +81,7 @@ def old_school(request):
             name = form.cleaned_data["name"]
             school = form.cleaned_data["school"]
             return render(request, "main/form_throwback.html", {'data': form.cleaned_data, 'campaign': 'dont_care'})
+        return render(request, "main/form.html", {'form': ThrowbackSchool, 'err': "sorry, you didn't do that right"})
     else:
         return render(request, "main/form.html", {'form': ThrowbackSchool})
 
@@ -88,6 +94,7 @@ def hollywood_undead(request):
             address = form.cleaned_data["address"]
             email = form.cleaned_data["email"]
             return render(request, "main/form_hollywood.html", {'data': form.cleaned_data, 'campaign': 'blue_man'})
+        return render(request, "main/form.html", {'form': HollywoodUndead, 'err': "sorry, you didn't do that right"})
     else:
         return render(request, "main/form.html", {'form': HollywoodUndead})
 		
