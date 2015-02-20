@@ -24,7 +24,7 @@ class MiceBorrow(forms.Form):
 
 class VirusCon(forms.Form):
     name = forms.CharField(label="Name", max_length=128)
-    email = forms.EmailField(label="Age")
+    email = forms.EmailField(label="Email")
 
 
 class FriendClosure(forms.Form):
