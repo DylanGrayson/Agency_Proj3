@@ -1,8 +1,25 @@
-[{"fields":
-	{"handle": "blue_man",
-	"name": "Blue Man Group Facepaint Giveaway",
-	"subheading": "Show your True Blue Spirit!",
-	"desc": "Grown men paint themselves blue and bang on garbage for about an hour."},
-"model": "main.campaign",
-"pk": 4}
+[
+  {
+    "fields":
+	  {
+        "handle": "blue_man",
+	    "name": "Blue Man Group Facepaint Giveaway",
+	    "subheading": "Show your True Blue Spirit!",
+	    "desc": "Grown men paint themselves blue and bang on garbage for about an hour."
+      },
+    "model": "main.campaign",
+    "pk": 1
+  },
+
+  {
+    "fields":
+      {
+        "handle": "dont_care",
+        "name": "The Don't Care's Secret Present Extravaganza",
+        "subheading": "Show That You Care! I Mean... If You Are Into That..",
+        "desc": "Yeah yeah... blah blah blah. Want a present?"
+      },
+    "model": "main.campaign",
+    "pk" : 2
+  }
 ]
