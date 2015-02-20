@@ -69,5 +69,17 @@
       },
     "model": "main.campaign",
     "pk" : 6
+  },
+  
+  {
+    "fields":
+      {
+        "handle": "hollywood_undead",
+        "name": "Mask Giveaway",
+        "subheading": "Caution may frighten people",
+        "desc": "Replica of a Hollywood Undead mask to be raffled away. Seriously who doesn't want one of these?"
+      },
+    "model": "main.campaign",
+    "pk" : 7
   }
 ]
