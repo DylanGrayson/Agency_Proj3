@@ -21,5 +21,53 @@
       },
     "model": "main.campaign",
     "pk" : 2
+  },
+
+  {
+    "fields":
+      {
+        "handle": "mouse",
+        "name": "The Great Mice Brigade",
+        "subheading": "It's Squeakin Awesome!",
+        "desc": "Have you ever wished you could have hundreds of little friends? Well now you can! We will send you hundreds of friendly mice in the mail to keep you or someone you care about company for as long as you want! Once you have had your fill of friendship, round the little guys up and send them back to us, free of charge! Your friends will love having these little bros."
+      },
+    "model": "main.campaign",
+    "pk" : 3
+  },
+
+  {
+    "fields":
+      {
+        "handle": "friend",
+        "name": "Friend-O-Four Sneak Attack",
+        "subheading": "For those who have a sense of humor.",
+        "desc": "Have a friend who you need to prank? Or spends too much time on the Internet? We have a solution. We will send your friend a (mostly) harmless virus that causes all of their queries to the web to return a 404 error for a period of your choosing! Soon you and friend will be laughing and having fun outside, and the virus will shut off leaving their device intact."
+      },
+    "model": "main.campaign",
+    "pk" : 4
+  },
+
+  {
+    "fields":
+      {
+        "handle": "closure",
+        "name": "Fake-Closure Notes",
+        "subheading": "Show them that you care",
+        "desc": "Everyone needs a little stress in his or her life from time to time. Just a little something to get the heart rate up, but without ever actually causing any harm can go a long way. At Fake-closure, we provide a service where you can send you friends fake notices of foreclosure. Once they call the number on the notice, we will explain to them that it was all just a friendly prank from you. Because you care."
+      },
+    "model": "main.campaign",
+    "pk" : 5
+  },
+
+  {
+    "fields":
+      {
+        "handle": "old_school",
+        "name": "Throwback Clothing Package",
+        "subheading": "Use with caution during spirit weeks",
+        "desc": "Have had a panic attack because your spirit week costumes are lame? Well we have a giveaway where you can win the most iconic clothing from different eras and situations. You name it, we've got it"
+      },
+    "model": "main.campaign",
+    "pk" : 6
   }
 ]
