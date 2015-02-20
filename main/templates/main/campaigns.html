@@ -1,70 +1,48 @@
 {% extends 'main/layout.html' %}
 {% block content %}
- <!-- Page Content -->
-    <div class="container">
-
-        <!-- Page Heading -->
-        <div class="row">
-            <div class="col-lg-12">
-                <h1 class="page-header">Our Campaigns</h1>
-            </div>
+  <!-- Page Content -->
+  <div class="container">
+    <!-- Page Heading -->
+    <div class="row">
+      <div class="col-lg-12">
+        <h1 class="page-header">Our Campaigns</h1>
+      </div>
+    </div>
+    <!-- /.row -->
+    {% for campaign in campaigns %}
+      <!-- Campaign One -->
+      <div class="row">
+        <div class="col-md-7">
+          <a href="#">
+            <img class="img-responsive" src="http://placehold.it/700x300" alt="">
+          </a>
         </div>
-        <!-- /.row -->
-      {% for campaign in campaigns %}
-        <!-- Campaign One -->
-        <div class="row">
-            <div class="col-md-7">
-                <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/700x300" alt="">
-                </a>
-            </div>
-            <div class="col-md-5">
-                <h3>{{ campaign.name }}</h3>
-                <h4>{{ campaign.subheading }}</h4>
-                <p>{{ campaign.desc }}</p>
-                <!-- Button trigger modal -->
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">View Campaign <span class="glyphicon glyphicon-chevron-right"></span></a></button>
-                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                  <div class="modal-dialog">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="myModalLabel">Email Form</h4>
-                      </div>
-                      <div class="modal-body">
-                        <section class="content bgcolor-3">
-                            <span class="input input--haruki">
-                                <input class="input__field input__field--haruki" type="text" id="input-1" />
-                                <label class="input__label input__label--haruki" for="input-1">
-                                    <span class="input__label-content input__label-content--haruki">Email</span>
-                                </label>
-                            </span>
-                        </section>
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Submit</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-               
-                <!-- /.modal -->
-            </div>
-        </div>
-        <!-- /.row -->
-        <hr>
-         {% endfor %}
-      
-        <!-- /.row -->
-        <hr>
-        <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>Copyright &copy; Neckbeards LLC 2015</p>
-                </div>
-            </div>
-            <!-- /.row -->
-        </footer>
+        <div class="col-md-5">
+          <h3>{{ campaign.name }}</h3>
+          <h4>{{ campaign.subheading }}</h4>
+          <p>{{ campaign.desc }}</p>
+          <!-- Button trigger modal -->
+          <a href="{{ campaign.handle }}">
+          <div type="button" class="btn btn-primary">View Campaign</div>
+          <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+        </button>
+        <!-- /.modal -->
+      </div>
+    </div>
+    <!-- /.row -->
+    <hr>
+  {% endfor %}
+  
+  <!-- /.row -->
+  <hr>
+  <!-- Footer -->
+  <footer>
+    <div class="row">
+      <div class="col-lg-12">
+        <p>Copyright &copy; Neckbeards LLC 2015</p>
+      </div>
+    </div>
+    <!-- /.row -->
+  </footer>
 {% endblock %}
