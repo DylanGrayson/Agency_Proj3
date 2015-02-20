@@ -1,5 +1,6 @@
 {% extends 'main/layout.html' %}
 {% block content %}
+{% load staticfiles %}
   <!-- Page Content -->
   <div class="container">
     <!-- Page Heading -->
@@ -14,7 +15,8 @@
       <div class="row">
         <div class="col-md-7">
           <a href="#">
-            <img class="img-responsive" src="http://placehold.it/700x300" alt="">
+          {% url campaign.handle as handle %}
+            <img class="img-responsive" src="../../static/img/{{campaign.handle}}.png" alt="">
           </a>
         </div>
         <div class="col-md-5">
