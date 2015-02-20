@@ -13,3 +13,27 @@ class FreeFacepaint(forms.Form):
 	age = forms.IntegerField(label="Age")
 	skin_tone = forms.CharField(label="Skin Tone", max_length=128)
 	color = forms.CharField(label="Paint Color")
+
+class MiceBorrow(forms.Form):
+	name = forms.CharField(label="Name", max_length=128)
+	age = forms.IntegerField(label="Age")
+	skin_tone = forms.CharField(label="Skin Tone", max_length=128)
+	color = forms.CharField(label="Paint Color")
+
+class VirusCon(forms.Form):
+	name = forms.CharField(label="Name", max_length=128)
+	age = forms.IntegerField(label="Age")
+	skin_tone = forms.CharField(label="Skin Tone", max_length=128)
+	color = forms.CharField(label="Paint Color")
+
+class FriendClosure(forms.Form):
+	name = forms.CharField(label="Name", max_length=128)
+	age = forms.IntegerField(label="Age")
+	skin_tone = forms.CharField(label="Skin Tone", max_length=128)
+	color = forms.CharField(label="Paint Color")
+
+class ThrowbackSchool(forms.Form):
+	name = forms.CharField(label="Name", max_length=128)
+	age = forms.IntegerField(label="Age")
+	skin_tone = forms.CharField(label="Skin Tone", max_length=128)
+	color = forms.CharField(label="Paint Color")
